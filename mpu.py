@@ -7,10 +7,6 @@ sensor = mpu6050(0x68)
 x, y, z = [], [], []
 i = 0
 
-
-  with open(filename, 'wb') as outp:  # Overwrites any existing file.
-  pickle.dump(obj, outp, pickle.HIGHEST_PROTOCOL)
-
 while(i < 1):
   a_x, a_y, a_z = sensor.get_accel_data()
   print('X: {} | Y: {} | Z: {}'.format(a_x, a_y, a_z))
