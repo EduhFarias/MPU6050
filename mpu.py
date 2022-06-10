@@ -9,7 +9,7 @@ i = 0
 
 while(i < 1):
   accel_data = sensor.get_accel_data()
-  ax, ay, az = accel_data[], accel_data[], accel_data[]
+  ax, ay, az = accel_data['x'], accel_data['y'], accel_data['z']
   print('X: {} | Y: {} | Z: {}'.format(ax, ay, az))
   x.push(ax)
   y.push(ay)
