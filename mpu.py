@@ -8,8 +8,12 @@ x, y, z = [], [], []
 i = 0
 
 while(i < 1):
-  a_x, a_y, a_z = sensor.get_accel_data()
-  print('X: {} | Y: {} | Z: {}'.format(a_x, a_y, a_z))
+  accel_data = sensor.get_accel_data()
+  ax, ay, az = accel_data[], accel_data[], accel_data[]
+  print('X: {} | Y: {} | Z: {}'.format(ax, ay, az))
+  x.push(ax)
+  y.push(ay)
+  z.push(az)
   i += 0.01
 
 with open('tst1.json', 'w') as outp:  # Overwrites any existing file.
