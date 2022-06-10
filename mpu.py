@@ -16,5 +16,5 @@ while(i < 1):
   print('X: {} | Y: {} | Z: {}'.format(a_x, a_y, a_z))
   i += 0.01
 
-with open(tst1.json, 'w') as outp:  # Overwrites any existing file.
+with open('tst1.json', 'w') as outp:  # Overwrites any existing file.
   json.dump({'x': x, 'y': y, 'z': z}, outp)
