@@ -8,7 +8,7 @@ sensor = mpu6050(0x68)
 x, y, z = [], [], []
 i = 0
 
-while(i < 1):
+while(i < 50):
   accel_data = sensor.get_accel_data()
   ax, ay, az = accel_data['x'], accel_data['y'], accel_data['z']
   print('X: {} | Y: {} | Z: {}'.format(ax, ay, az))
