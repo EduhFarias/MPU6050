@@ -15,8 +15,8 @@ while(i < 50):
   x.append(ax)
   y.append(ay)
   z.append(az)
-  i += 0.01
-  sleep(0.01)
+  i += 0.05
+  sleep(0.05)
 
 with open('tst1.json', 'w') as outp:  # Overwrites any existing file.
   json.dump({'x': x, 'y': y, 'z': z}, outp)
