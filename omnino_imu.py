@@ -99,7 +99,7 @@ def main(args=None):
         y.append(ay)
         z.append(az)
         i += 0.5
-        sleep(0.5)
+        time.sleep(0.5)
     serial_motor(0,0,0,ser)
     with open('omnino.json', 'w') as outp:  # Overwrites any existing file.
         json.dump({'x': x, 'y': y, 'z': z}, outp)
