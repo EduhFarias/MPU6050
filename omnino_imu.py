@@ -86,12 +86,12 @@ def main(args=None):
     vx, vy, w = 0, 1, 0
     r = 0.02
     d = 0.07
-    vel_1 = 1/r * (vx - d*w)
-    vel_2 = 1/r * (-1/2*vx - sqrt(3)/2*vy - d*w)
-    vel_3 = 1/r * (-1/2*vx + sqrt(3)/2*vy - d*w)
+    vel_1 = 1/r * (vx - d*w) * 3.1415/180
+    vel_2 = 1/r * (-1/2*vx - sqrt(3)/2*vy - d*w) * 3.1415/180
+    vel_3 = 1/r * (-1/2*vx + sqrt(3)/2*vy - d*w) * 3.1415/180
     x, y, z = [], [], []
     i = 0
-    serial_motor(vel_1, vel_2, vel_3, ser)
+    serial_motor(int(vel_1), int(vel_2), int(vel_3), ser)
     while(i < 50):
         accel_data = sensor.get_accel_data()
         ax, ay, az = accel_data['x'], accel_data['y'], accel_data['z']
