@@ -92,6 +92,7 @@ def main(args=None):
     vel_3 = 1/r * (-1/2*vx + sqrt(3)/2*vy - d*w) * 3.1415/180
     x, y, z = [], [], []
     i = 0
+    print(vel_1, vel_2, vel_3)
     serial_motor(int(vel_1), int(vel_2), int(vel_3), ser)
     while(i < 50):
         print(i)
