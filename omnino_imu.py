@@ -94,6 +94,7 @@ def main(args=None):
     i = 0
     serial_motor(int(vel_1), int(vel_2), int(vel_3), ser)
     while(i < 50):
+        print(i)
         accel_data = sensor.get_accel_data()
         ax, ay, az = accel_data['x'], accel_data['y'], accel_data['z']
         x.append(ax)
