@@ -93,14 +93,14 @@ def main(args=None):
     i = 0
     serial_motor(vel_1, vel_2, vel_3, ser)
     while(i < 50):
-    accel_data = sensor.get_accel_data()
-    ax, ay, az = accel_data['x'], accel_data['y'], accel_data['z']
-    x.append(ax)
-    y.append(ay)
-    z.append(az)
-    i += 0.5
-    sleep(0.5)
-
+        accel_data = sensor.get_accel_data()
+        ax, ay, az = accel_data['x'], accel_data['y'], accel_data['z']
+        x.append(ax)
+        y.append(ay)
+        z.append(az)
+        i += 0.5
+        sleep(0.5)
+    serial_motor(0,0,0,ser)
     with open('omnino.json', 'w') as outp:  # Overwrites any existing file.
     json.dump({'x': x, 'y': y, 'z': z}, outp)
     # rclpy.init(args=args)
