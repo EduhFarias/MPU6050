@@ -102,7 +102,7 @@ def main(args=None):
         sleep(0.5)
     serial_motor(0,0,0,ser)
     with open('omnino.json', 'w') as outp:  # Overwrites any existing file.
-    json.dump({'x': x, 'y': y, 'z': z}, outp)
+        json.dump({'x': x, 'y': y, 'z': z}, outp)
     # rclpy.init(args=args)
     # omnino_driver_node = OmninoDriverNode()
     # rclpy.spin(omnino_driver_node)
