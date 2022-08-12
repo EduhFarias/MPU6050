@@ -83,7 +83,7 @@ class OmninoDriverNode(Node):
 def main(args=None):
     ser = serial.Serial('/dev/ttyS0', 9600)
     sensor = mpu6050(0x68)
-    vx, vy, vz = 0, 1, 0
+    vx, vy, w = 0, 1, 0
     r = 0.02
     d = 0.07
     vel_1 = 1/r * (vx - d*w)
